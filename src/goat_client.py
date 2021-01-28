@@ -3,10 +3,7 @@ import discord
 
 class GoatBotClient(discord.Client):
     async def on_message(self, message):
-        if message.content.startswith('!insult'):
-            '''returns a cheeky insult'''
-            await message.channel.send(await self.GetInsult())
-        elif message.content.startswith('!loss'):
+        if message.content.startswith('!loss'):
             '''Reports loss to supplied username'''
             pass
         elif message.content.startswith('!stats'):  
@@ -103,7 +100,4 @@ class GoatBotClient(discord.Client):
             # TODO stats == elo? How recalc and not reset?
             pass
 
-    async def GetInsult(self):
-        '''retrieves an insult from evilinsult.com's API'''
-        r = requests.get('https://evilinsult.com/generate_insult.php?lang=en')
-        return r.text
+   
