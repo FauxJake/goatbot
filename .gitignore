@@ -2,3 +2,4 @@ goatbot-env
 .env
 todo
 __pycache__
+.vscode
